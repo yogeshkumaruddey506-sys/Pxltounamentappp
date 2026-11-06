@@ -209,5 +209,35 @@ document.getElementById("registerForm")
 });
 </script>
 
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js")
+      .then(() => console.log("PXL App Ready"))
+      .catch(error => console.log(error));
+  });
+}
+</script>
+  
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js")
+      .then(() => console.log("PXL App Ready"))
+      .catch(error => console.log(error));
+  });
+}
+</script>
+  
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js")
+      .then(() => console.log("PXL App Ready"))
+      .catch(error => console.log(error));
+  });
+}
+</script>
+  
 </body>
 </html>
