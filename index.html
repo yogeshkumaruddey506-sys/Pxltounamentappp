@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PXL Tournament App</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b1020;
+  color: white;
+}
+
+header {
+  background: #171f35;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #00e5ff;
+}
+
+header h1 {
+  color: #00e5ff;
+  margin: 0;
+}
+
+header p {
+  color: #ccc;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  padding: 15px;
+}
+
+.card {
+  background: #171f35;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 15px;
+  border: 1px solid #303b55;
+}
+
+h2 {
+  color: #00e5ff;
+  text-align: center;
+}
+
+input, select {
+  width: 100%;
+  padding: 13px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #45516b;
+  background: #0b1020;
+  color: white;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background: #00e5ff;
+  color: #07101c;
+  border: none;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+button:active {
+  background: #00bcd4;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 0;
+}
+
+footer {
+  text-align: center;
+  color: #aaa;
+  padding: 25px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🔥 PXL TOURNAMENT 🔥</h1>
+  <p>Free Fire Gaming Tournament</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>🏆 Tournament Details</h2>
+
+    <div class="info">
+      <span>Game</span>
+      <b>Free Fire</b>
+    </div>
+
+    <div class="info">
+      <span>Mode</span>
+      <b>Solo / Duo / Squad</b>
+    </div>
+
+    <div class="info">
+      <span>Entry Fee</span>
+      <b>Free (Demo)</b>
+    </div>
+
+    <div class="info">
+      <span>Prize</span>
+      <b>Demo Tournament</b>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>📝 Player Registration</h2>
+
+    <form id="registerForm">
+
+      <input
+        type="text"
+        id="playerName"
+        placeholder="Player Name"
+        required
+      >
+
+      <input
+        type="text"
+        id="gameUID"
+        placeholder="Free Fire Game UID"
+        required
+      >
+
+      <input
+        type="text"
+        id="teamName"
+        placeholder="Team Name"
+        required
+      >
+
+      <select id="gameMode" required>
+        <option value="">Select Game Mode</option>
+        <option value="Solo">Solo</option>
+        <option value="Duo">Duo</option>
+        <option value="Squad">Squad</option>
+      </select>
+
+      <button type="submit">
+        REGISTER NOW
+      </button>
+
+    </form>
+
+    <p id="message" style="text-align:center;color:#00ff99"></p>
+  </div>
+
+  <div class="card">
+    <h2>🎮 About PXL</h2>
+    <p>
+      Welcome to PXL Tournament App.
+      Join gaming tournaments and enjoy
+      Free Fire gameplay with your friends!
+    </p>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 PXL Tournament App
+</footer>
+
+<script>
+document.getElementById("registerForm")
+.addEventListener("submit", function(event) {
+
+  event.preventDefault();
+
+  const name = document.getElementById("playerName").value;
+  const uid = document.getElementById("gameUID").value;
+  const team = document.getElementById("teamName").value;
+  const mode = document.getElementById("gameMode").value;
+
+  document.getElementById("message").innerText =
+    "Registration successful! Welcome " + name + " 🎮";
+
+  alert(
+    "Player: " + name +
+    "\nUID: " + uid +
+    "\nTeam: " + team +
+    "\nMode: " + mode
+  );
+
+  document.getElementById("registerForm").reset();
+});
+</script>
+
+</body>
+</html>
